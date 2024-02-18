@@ -14,9 +14,9 @@ All the backgrounds and the sprites seen on the screen were drawn by me in Paint
 
 # Demo
 
-![](./CarpToDragon.gif)
+[Video](https://www.dropbox.com/scl/fi/wftii14jkke17v0e4rcdd/CarpToDragon.mp4?rlkey=qvryrpshflckwglrtamzluz8d&dl=0)
 
 # Certificate
 
-<img="./CS50G.png" height="300">
+<img src="./CS50G.png" height="300">
 
