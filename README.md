@@ -18,5 +18,5 @@ All the backgrounds and the sprites seen on the screen were drawn by me in Paint
 
 # Certificate
 
-<img src="./CS50G.png" height="300">
+<img src="./CS50G.png" height="600">
 
