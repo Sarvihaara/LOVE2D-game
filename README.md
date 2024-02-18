@@ -11,3 +11,12 @@ If the player loses (by colliding with an otter, bigger fish, rock, or getting c
 Music (from free music archive) is added, as are sound effects (blip for eating smaller fish and explosion for colliding with an enemy/obstacle).
 
 All the backgrounds and the sprites seen on the screen were drawn by me in Paint, and the final two pictures of the carp and of the dragon at the end of the game were also hand-drawn by me.
+
+# Demo
+
+![](./CarpToDragon.gif)
+
+# Certificate
+
+![](./CS50G.png)
+
