@@ -18,5 +18,5 @@ All the backgrounds and the sprites seen on the screen were drawn by me in Paint
 
 # Certificate
 
-![](./CS50G.png)
+<img="./CS50G.png" height="300">
 
