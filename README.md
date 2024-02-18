@@ -1,4 +1,4 @@
-A simple 2D game with Lua using Love game engine, created for the final project for CS50 Harvard course.
+A simple 2D game with Lua using LOVE2D game engine, created for the final project for CS50 Harvard course.
 
 To play on Windows, run `game.exe` file from `exe` folder (antivirus might prevent). Alternatively, install LOVE2D engine and drag `game` folder onto the LOVE2d shortcut.
 
