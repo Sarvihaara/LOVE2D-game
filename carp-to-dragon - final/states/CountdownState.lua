@@ -8,29 +8,20 @@ function CountdownState:init()
 
     self.waterfall = love.graphics.newImage('pictures/waterfall.png')
 
-    Timer.every(1, function() 
-        self.count = self.count - 1 
-        if self.count <= 0 then
-            gStateMachine:change('play2')
-        end
-    end)
-
 end
 
 function CountdownState:update(dt)
     self.timer = self.timer + dt
-
-
-
     
     if self.timer > COUNTDOWN_TIME then
         self.timer = self.timer % COUNTDOWN_TIME
         self.count = self.count - 1
-    end
 
-    
-    Timer.update(dt)
-end
+        if self.count <= 0 then
+            gStateMachine:change('play2')
+        end
+    end
+    end
 
 
 function CountdownState:render()

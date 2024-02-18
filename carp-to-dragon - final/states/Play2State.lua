@@ -27,7 +27,7 @@ function Play2State:init()
     --of course this still does not solve y position problem since carp y is still
     --positioned up so if you go behind a rock and down through it, carp will pass half through
     --before collision is detected, but since the goal is to avoid rock head first or on sides,
-    --I'll say this doesn't matter (doesn't make sense to follow a rock down that way for a user anyway)
+    --I'll say this doesn't matter 
     self.carp.x_detect = self.carp.newHeight
     
 
@@ -44,13 +44,15 @@ function Play2State:init()
     self.difficultyTimer = 0
     self.playTimer = 0
 
+    self.playDuration = 15
+
 end
 
 function Play2State:update(dt)
 
     self.waterfall_scroll = (self.waterfall_scroll + WATERFALL_SPEED * dt) % (VIRTUAL_HEIGHT + 3)
     --begin updating this scroll only when it begins to actually get used
-    if self.playTimer > 30 then
+    if self.playTimer > self.playDuration then
         self.watertop_scroll = self.watertop_scroll + WATERFALL_SPEED * dt
     end
 
@@ -73,7 +75,7 @@ function Play2State:update(dt)
     self.playTimer = self.playTimer + dt
 
     --spawn rocks only while waterfall top is not yet reached
-    if self.playTimer < 30 then
+    if self.playTimer < self.playDuration then
         --approx. every five seconds ramp up game difficulty
         --but also increase the carp's speed capacity slightly
         if self.difficultyTimer > 5 then
@@ -114,13 +116,13 @@ end
 
 function Play2State:render()
 
-    if self.playTimer > 30 then
+    if self.playTimer > self.playDuration then
         love.graphics.draw(self.top, 0, self.watertop_scroll, 0, 1, 1, 0, VIRTUAL_HEIGHT * 2)
     else
         love.graphics.draw(self.waterfall, 0, self.waterfall_scroll, 0, 1, 1, 0, VIRTUAL_HEIGHT + 144)
     end
 
-    if self.playTimer > 35 then
+    if self.playTimer > 24 then
         gStateMachine:change('win')
     end
 
